@@ -7,4 +7,4 @@ class Solution(object):
         return list(final)
     
 solution = Solution()
-print(solution.intersection([1, 2, 2, 1], [2, 2]))
+print(solution.intersection([1, 2, 2, 1], [2, 2, 3]))
