@@ -16,7 +16,7 @@ def calculate_aggregated_threat_score(data):
         total_weight += weight
         print(f"Department mean score: {dept_mean_score}, Importance: {weight}")
     aggregated_score = min(90, total_score/total_weight) if total_weight > 0 else 0
-    print(f"Total Score: {total_score}, Total Weight: {total_weight}, Aggreagted Score: {aggregated_score}")
+    print(f"Total Score: {total_score}, Total Weight: {total_weight}, Aggregated Score: {aggregated_score}")
     return aggregated_score
 
 class TestScoreCalculation(unittest.TestCase):
