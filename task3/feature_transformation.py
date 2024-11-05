@@ -1,11 +1,11 @@
 import math
 import unittest
 
-def time_to_cyclic_features(hour):
+def time_to_cyclic_features(hour: int) -> float:
     angle = (2 * math.pi * hour) / 24
     return math.sin(angle), math.cos(angle)
 
-def cyclic_time_difference(hour1, hour2):
+def cyclic_time_difference(hour1: int, hour2: int) -> float:
     sin1, cos1 = time_to_cyclic_features(hour1)
     sin2, cos2 = time_to_cyclic_features(hour2)
     return math.acos(sin1 * sin2 + cos1 * cos2) * (24 / (2 * math.pi))
