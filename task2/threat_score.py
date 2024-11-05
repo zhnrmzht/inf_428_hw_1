@@ -1,12 +1,12 @@
 import unittest
 import numpy as np
 
-def generate_random_data(mean, variance, num_samples):
+def generate_random_data(mean: int, variance: int, num_samples: int) -> np.ndarray:
     data = np.random.randint(max(mean - variance, 0), min(mean + variance + 1, 90), num_samples)
     print(f"Generated data (mean: {mean}, variance: {variance}): {data}")
     return data
 
-def calculate_aggregated_threat_score(data):
+def calculate_aggregated_threat_score(data: np.ndarray) -> float:
     total_score = 0
     total_weight = 0
     for dept in data:

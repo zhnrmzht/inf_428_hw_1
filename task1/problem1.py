@@ -1,5 +1,7 @@
-class Solution(object):
-    def findLengthOfLCIS(self, nums):
+from typing import List
+
+class Solution:
+    def findLengthOfLCIS(self, nums: List[int]) -> int:
         if not nums:
             return 0
         
